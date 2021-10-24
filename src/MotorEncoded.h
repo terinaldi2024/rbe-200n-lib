@@ -124,10 +124,7 @@ public:
 	 */
 	void setEffortPercent(float effort)
 	{
-		// when setEffort is called, we stop closed-loop control
-		ctrlMode = CTRL_DIRECT;
-
-		MotorBase::setEffortPercent(effort);
+		setEffort(effort / 100.0);
 	}
 
 public:
