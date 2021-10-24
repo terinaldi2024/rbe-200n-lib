@@ -11,10 +11,6 @@
 #include <ESP32Servo.h>
 #include <ESP32Encoder.h>
 
-//used to reduce jerk; set to 1 to deactivate
-//experimental, at best; not recommended (it's not a good idea)
-const float DELTA_EFFORT = 1;
-
 /** \brief A base class for motors, with pwm controlled by an ESP32PWM object.
  *
  * The MotorBase class implements pwm for effort (including direction). Several methods are declared virtual
@@ -42,14 +38,6 @@ private:
 	 * True if the motor has been attached
 	 */
 	bool isAttached = false;
-
-	/**
-	 * Hold the 'ideal' effort. The change in the actual effort (currentEffort) is limited to prevent jerk.
-	 * Somewhat experiemental. Set DELTA_EFFORT to a large value to disable, as that is what limits the change.
-	 * 
-	 * todo: clean this up or eliminate to avoid unintended consequences when tuning.
-	 */
-	float targetEffort = 0;
 
 	/**
 	 * variable for caching the current effort being sent to the PWM/direction pins
@@ -126,14 +114,6 @@ public:
 protected:
 
 	bool isReversed = false;
-
-	/**
-	 * Sets the desired effort. The change in actual effort is restricted to avoid jerk.
-	 */
-	void setTargetEffort(float effort)
-	{
-		targetEffort = effort;
-	}
 
 	/**
 	 * Called each time through the control loop (from Chassis)

@@ -4,7 +4,6 @@
  * Author: Greg Lewin, adapted from original work by hephaestus
  */
 
-
 #include <MotorEncoded.h>
 
 /**
@@ -120,7 +119,7 @@ void MotorEncoded::process()
 			// Serial.print(effort);
 			// Serial.print('\t');
 
-			setTargetEffort(effort);
+			setEffort(effort);
 		}
 	}
 

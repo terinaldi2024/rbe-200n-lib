@@ -23,13 +23,6 @@ MotorBase::~MotorBase()
  */
 void MotorBase::process(void)
 {
-	if (targetEffort > currentEffort + DELTA_EFFORT)
-		currentEffort += DELTA_EFFORT;
-	else if (targetEffort < currentEffort - DELTA_EFFORT)
-		currentEffort -= DELTA_EFFORT;
-	else
-		currentEffort = targetEffort;
-
 	setEffortLocal(currentEffort);
 }
 
@@ -61,7 +54,7 @@ void MotorBase::setEffort(float effort)
 	if (effort < -1)
 		effort = -1;
 
-	setTargetEffort(effort);
+	currentEffort = effort;
 }
 
 /*
