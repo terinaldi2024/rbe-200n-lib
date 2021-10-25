@@ -1,5 +1,7 @@
 #include "Chassis.h"
 
+Chassis chassis;
+
 /**
  * Chassis class
  */
