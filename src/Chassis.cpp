@@ -51,7 +51,9 @@ Chassis::Chassis(void) :
     leftMotor(MOTOR_LEFT_PWM, MOTOR_LEFT_DIR, MOTOR_LEFT_ENCA, MOTOR_LEFT_ENCB),
     rightMotor(MOTOR_RIGHT_PWM, MOTOR_RIGHT_DIR, MOTOR_RIGHT_ENCA, MOTOR_RIGHT_ENCB)
 {
-    
+    //TODO: Set gains for speed control
+	//Either click into the MotorEncoded class and change the initializer in the 
+	//constructor, or manually set the gains with the setter methods
 }
 
 void Chassis::init(void)
