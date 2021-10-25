@@ -2,6 +2,7 @@
 #define __CHASSIS_H
 
 #include <RBE-200n-Lib.h>
+#include <ESP32Servo.h>
 #include <MotorEncoded.h>
 
 /**
