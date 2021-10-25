@@ -14,7 +14,7 @@ float PIDController::ComputeEffort(float error)
 
     if(errorBound > 0) //cap error; errorBound == 0 means don't cap
     {
-        if(fabs(sumError) > errorBound) //not sure if should multiply by Ki or not to make it scale
+        if(fabs(sumError) > errorBound) //you could multiply sumError by Ki to make it scale
         {
             sumError -= currError; //if we exceeded the limit, just subtract it off again
         }
