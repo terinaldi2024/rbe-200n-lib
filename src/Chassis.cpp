@@ -13,7 +13,7 @@ void onMotorTimer(void* param)
 	ESP_LOGI(TAG, "Starting the PID loop thread");
 	TickType_t xLastWakeTime;
 	xLastWakeTime = xTaskGetTickCount();
-    const TickType_t xInterval = 1;
+    const TickType_t xInterval = 1; 	// sets up 1ms timer
 	while(true)
 	{
 		vTaskDelayUntil(&xLastWakeTime, xInterval);
