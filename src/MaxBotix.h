@@ -49,7 +49,7 @@ public:
     uint16_t readASCII(void);
 
     /**
-     * EXERCISE: Write a getDistance() function for the distance method of your choice.
+     * TODO: Write a getDistance() function for the distance method of your choice.
      * 
      * See the .cpp file.
      */

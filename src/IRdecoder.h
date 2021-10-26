@@ -11,6 +11,7 @@
  * is in the LSB of currCode. That means that the key code is found in bits [23..16] of currCode
  * 
  * https://techdocs.altium.com/display/FPGA/NEC+Infrared+Transmission+Protocol
+ * https://www.vishay.com/docs/80071/dataform.pdf
  * 
  * This does not interpret the codes into which key was pressed. That needs to be 
  * mapped on a remote by remote basis.
